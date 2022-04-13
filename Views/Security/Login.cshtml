@@ -1,0 +1,57 @@
+﻿@model Su_Project.Models.User
+
+@{
+    ViewData["Title"] = "Đăng nhập";
+    Layout = "";
+}
+
+<link rel="stylesheet" href="~/css/loginstyle.css" type="text/css" media="all" />
+
+<main>
+    <!-- form section start -->
+    <section class="w3l-workinghny-form">
+        <!-- /form -->
+        <div class="workinghny-form-grid">
+            <div class="wrapper">
+                <div class="logo">
+                    <!-- if logo is image enable this
+                        <a class="brand-logo" href="#index.html">
+                            <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+                        </a> -->
+                </div>
+                <div class="workinghny-block-grid">
+                    <div class="form-right-inf">
+                        <div class="social-media">
+                            <a href="#facebook" class="fb"><span class="fab fa-facebook" aria-hidden="true"></span> Đăng nhập bằng facebok</a>
+                        </div>
+                        <div class="login-form-content">
+                            <h2>Đăng nhập bằng tài khoản</h2>
+                            <form action="Verify" class="signin-form" method="post">
+                                <div class="one-frm">
+                                    <input type="text" name="AccountName" placeholder="Tên đăng nhập" required="" autofocus>
+                                </div>
+                                <div class="one-frm">
+                                    <input type="password" name="Password" placeholder="Mật khẩu" required="">
+                                </div>
+                                <label class="check-remaind">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    <p class="remember">Lưu mật khẩu</p>
+
+                                </label>
+                                <button class="btn btn-style mt-3">Đăng nhập</button>
+                                <p class="already">Chưa có tài khoản? <a href="#signin">Đăng kí ngay</a></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //form -->
+
+    </section>
+    <!-- //form section start -->
+</main>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

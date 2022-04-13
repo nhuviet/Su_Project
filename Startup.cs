@@ -8,6 +8,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Su_Project.DataContext;
+using Su_Project.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Su_Project
 {
@@ -21,9 +24,17 @@ namespace Su_Project
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
+        
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddDbContext<RiviuNhaTrangDBContext>(opts =>
+            {
+                opts.UseSqlServer(
+                Configuration["ConnectionStrings:RiviuNhaTrangConnection"]);
+            });
+            services.AddScoped<IRiviuNhaTrangRepository, EFRiviuNhaTrangRepository>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -52,6 +63,7 @@ namespace Su_Project
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+            //SeedUserData.SeedUser(app);
         }
     }
 }

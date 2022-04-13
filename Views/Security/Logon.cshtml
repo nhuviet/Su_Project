@@ -1,0 +1,91 @@
+﻿@model Su_Project.Models.User
+@{
+    ViewData["Title"] = "Create";
+}
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link href="~/css/Sign.css" rel="stylesheet" />
+
+<main>
+    <div class="container-form">
+        <div class="row">
+            <div class="col-md-5 mx-auto">
+                <div id="second">
+                    <div class="myform form ">
+                        <div class="logo mb-3">
+                            <div class="col-md-12 text-center">
+                                <h1>Đăng kí</h1>
+                            </div>
+                        </div>
+                        <form asp-action="Create" name="registration">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-group">
+                                <label asp-for="AccountName" class="control-label">Tên tài khoản</label>
+                                <input asp-for="AccountName" class="form-control" />
+                                <span asp-validation-for="AccountName" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Password" class="control-label">Mật khẩu</label>
+                                <input asp-for="Password" type="password" class="form-control" />
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Password" class="control-label">Nhập lại mật khẩu</label>
+                                <input asp-for="Password" type="password" class="form-control" />
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="FullName" class="control-label">Họ tên</label>
+                                <input asp-for="FullName" class="form-control" />
+                                <span asp-validation-for="FullName" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Phone" class="control-label">số điện thoại</label>
+                                <input asp-for="Phone" class="form-control" />
+                                <span asp-validation-for="Phone" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Email" class="control-label">Email</label>
+                                <input asp-for="Email" class="form-control" />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="FaceBook" class="control-label">Địa chỉ</label>
+                                <input asp-for="FaceBook" class="form-control" />
+                                <span asp-validation-for="FaceBook" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Website" class="control-label">Địa chỉ</label>
+                                <input asp-for="Website" class="form-control" />
+                                <span asp-validation-for="Website" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-md-12 text-center mb-3">
+                                <input type="submit" value="Đăng nhập" class="btn btn-primary btn-block mybtn tx-tfm" />
+                            </div>
+                            <div class="col-md-12 ">
+                                <div class="form-group">
+                                    <p class="text-center"><a asp-controller="SignUp" asp-area="" asp-action="SignIn" id="signin">Đã có tài khoản. Đăng nhập ngay</a></p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<div>
+    <a asp-action="Index">Quay lại</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
