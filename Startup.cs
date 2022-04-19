@@ -28,12 +28,8 @@ namespace Su_Project
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddDbContext<RiviuNhaTrangDBContext>(opts =>
-            {
-                opts.UseSqlServer(
-                Configuration["ConnectionStrings:RiviuNhaTrangConnection"]);
-            });
-            services.AddScoped<IRiviuNhaTrangRepository, EFRiviuNhaTrangRepository>();
+            
+ 
 
         }
 

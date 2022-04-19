@@ -69,3 +69,4 @@ E:\Hoc_Tap_CDKTCNNT\Dự Án Khóa Luận Tốt Nghiệp\StartUp\Su_Project\bin\
 E:\Hoc_Tap_CDKTCNNT\Dự Án Khóa Luận Tốt Nghiệp\StartUp\Su_Project\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 E:\Hoc_Tap_CDKTCNNT\Dự Án Khóa Luận Tốt Nghiệp\StartUp\Su_Project\obj\Debug\netcoreapp3.1\Razor\Views\Security\Logon.cshtml.g.cs
 E:\Hoc_Tap_CDKTCNNT\Dự Án Khóa Luận Tốt Nghiệp\StartUp\Su_Project\obj\Debug\netcoreapp3.1\Razor\Views\Security\Login.cshtml.g.cs
+E:\Hoc_Tap_CDKTCNNT\Dự Án Khóa Luận Tốt Nghiệp\StartUp\SU_Project\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Log_Layout.cshtml.g.cs

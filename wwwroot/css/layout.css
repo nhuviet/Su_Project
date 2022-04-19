@@ -9,4 +9,9 @@
 .space-rpadding-5{
     padding-right: 5px;
 }
-.bg-
+.bg-nav-2 {
+    background-color: #00e5ff;
+}
+nav .bg-nav-1 {
+    background-color: #007bff;
+}
